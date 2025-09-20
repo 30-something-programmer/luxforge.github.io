@@ -1,0 +1,17 @@
+// LUXFORGE custom CSS colouring :)
+
+// Required patch to ensure V2 - V3 crossover for now. Can be removed once upgraded in github
+$grey-color-dark:	#444; // deeper contrast for dark mode
+$grey-color:		#999;
+$grey-color-light:	#ccc;
+
+// Text colours
+$text-color:		#c0c0c0;
+$code-background-color: #222;
+
+// Link colours
+$link-base-color:	#d0a0ff;
+$link-hover-color:	lighten($link-base-color, 10%);
+
+// Brand colours
+$brand-color:		#dbd0f1;
