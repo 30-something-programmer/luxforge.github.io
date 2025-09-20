@@ -12,3 +12,8 @@ All notable changes to this project will be documented here.
 ### Changed
 - Commit cb207a0
 
+
+## [1.0.4] - 2025-09-20 20:32 BST
+### Changed
+- Commit 9cd8e47
+

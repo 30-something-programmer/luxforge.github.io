@@ -20,9 +20,9 @@
 
 
 # LUXFORGE version
-version: 1.0.3
-build: "2025-09-20 20:28 BST"
-commit_hash: cb207a0
+version: 1.0.4
+build: "2025-09-20 20:32 BST"
+commit_hash: 9cd8e47
 
 title: LuxForge
 description: "Narrative incident logs and homelab insights from ShinxLab"
