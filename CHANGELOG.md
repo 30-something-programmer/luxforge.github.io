@@ -17,3 +17,11 @@ All notable changes to this project will be documented here.
 ### Changed
 - Commit 9cd8e47
 
+
+## [1.0.5] - 2025-09-20 20:36 BST
+### Changed
+- Testing the forge-update script
+
+## [1.0.6] - 2025-09-20 20:38 BST
+### Changed
+- Added GIT push to auto-update
