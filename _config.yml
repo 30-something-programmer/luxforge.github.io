@@ -18,6 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+
+# LUXFORGE version
+version: 1.0.0
+build: "2025-09-20 19:53 BST"
+commit_hash: e39f299
+
 title: LuxForge
 description: "Narrative incident logs and homelab insights from ShinxLab"
 baseurl: "" # the subpath of your site, e.g. /blog
