@@ -3,3 +3,29 @@
 $color-scheme-auto: false;
 $color-scheme-dark: true;
 @import "minima/skins/auto";
+
+
+.luxforge-version {
+  color: $brand-color;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.luxforge-commit {
+  color: #e0e0e0;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+@keyframes pulseGlow {
+  0%   { text-shadow: 0 0 2px #d0a0ff; }
+  50%  { text-shadow: 0 0 8px #d0a0ff; }
+  100% { text-shadow: 0 0 2px #d0a0ff; }
+}
+
+
+
