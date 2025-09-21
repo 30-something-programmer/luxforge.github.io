@@ -1,0 +1,43 @@
+name: LuxForge Auto-Forge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Run forge-update.sh
+        run: |
+          chmod +x .forge/scripts/forge-update.sh
+          echo -e "patch\nAuto-forged via GitHub Action" | .forge/scripts/forge-update.sh
+
+      - name: Commit and push forge updates
+        run: |
+          git config user.name "LuxForge Bot"
+          git config user.email "bot@luxforge.local"
+          git add .
+          git commit -m "Auto-forged: version bump + changelog"
+          git push
+
+      - name: Build and deploy with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site

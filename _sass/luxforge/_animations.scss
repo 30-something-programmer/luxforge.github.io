@@ -1,0 +1,7 @@
+// Animation classes
+
+@keyframes pulseGlow {
+  0%   { text-shadow: 0 0 2px $brand-color; }
+  50%  { text-shadow: 0 0 8px $brand-color; }
+  100% { text-shadow: 0 0 2px $brand-color; }
+}

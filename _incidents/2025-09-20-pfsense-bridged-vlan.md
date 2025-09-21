@@ -1,7 +1,7 @@
 ---
 title: "pfSense Bridged VLAN Firewall Edge Case"
 date: 2025-09-20
-tags: [pfSense, VLAN, firewall, incident-log]
+tags: [pfsense, vlan, firewall, incident]
 layout: post
 ---
 

@@ -1,0 +1,56 @@
+// All tag-related styles
+
+.tag-index li {
+  margin-bottom: 0.5rem;
+}
+
+.tag-index h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: $brand-color;
+}
+
+.incident-count {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: $text-muted;
+}
+
+.tag-index ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.tag-cloud li {
+  margin: 0;
+}
+
+.tag-cloud a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: $brand-glow;
+  color: #000;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  box-shadow: 0 0 4px $brand-glow;
+  transition: transform 0.2s ease;
+}
+
+.tag-cloud a:hover {
+  transform: scale(1.05);
+}
+
+.tag-cloud .count {
+  margin-left: 4px;
+  font-size: 0.75rem;
+  color: #222;
+}

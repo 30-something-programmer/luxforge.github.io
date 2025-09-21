@@ -1,0 +1,31 @@
+
+.luxforge-version {
+  color: $brand-color;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  animation: pulseGlow 2.5s infinite;
+}
+
+.luxforge-meta {
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: 'Fira Code', monospace;
+  color: #e0e0e0;
+  margin-top: 0.5rem;
+}
+
+.luxforge-meta a {
+  color: $brand-color;
+  text-decoration: none;
+}
+
+.luxforge-meta a:hover {
+  text-decoration: underline;
+}
+
+.commit-hash {
+  color: #d0a0ff;
+}

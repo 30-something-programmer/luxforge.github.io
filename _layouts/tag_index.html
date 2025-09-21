@@ -1,0 +1,23 @@
+---
+layout: base
+---
+
+{% assign count = site.tags[page.tag] | size %}
+
+<div class="tag-index">
+  <h1>
+    {{ page.title }}
+    <span class="incident-count">
+      ({{ count }} incident{% if count != 1 %}s{% endif %})
+    </span>
+  </h1>
+
+  <ul>
+    {% for post in site.tags[page.tag] %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

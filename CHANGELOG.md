@@ -25,3 +25,7 @@ All notable changes to this project will be documented here.
 ## [1.0.6] - 2025-09-20 20:38 BST
 ### Changed
 - Added GIT push to auto-update
+
+## [1.0.7] - 2025-09-21 20:02 BST
+### Changed
+- Stable LuxForge gitpages via Jekyll with working menu icon and a few posts

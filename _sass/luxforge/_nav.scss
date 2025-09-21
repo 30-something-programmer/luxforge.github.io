@@ -1,0 +1,155 @@
+// All navigation CSS
+
+.site-header {
+  padding: 0.5rem 1rem; // or even 0.25rem if needed
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.site-nav {
+  border: none
+}
+
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; // adds spacing between links
+  font-size: 0.9rem; // smaller text
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: $brand-color;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: rgba($brand-glow, 0.15); // subtle glow on hover
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.icon-path {
+  fill: none;
+  stroke: $brand-color;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: d 0.4s ease;
+}
+
+.trigger {
+  display: none;
+  width: 75%;
+  margin-top: 3rem; // or enough to clear the toggle
+}
+
+.menu-wrapper input[type="checkbox"]:checked ~ .trigger {
+  display: block;
+}
+
+
+.line {
+  fill: none;
+  stroke: $brand-color;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  transform-origin: 50% 50%;
+
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column; // stack toggle and menu vertically
+  align-items: flex-end; // align toggle to the right
+  position: relative;
+}
+
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-trigger {
+  display: none;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+.nav-trigger:checked + .menu-toggle .top {
+  transform: translateY(30px) scaleX(0.6);
+  opacity: 0.8;
+}
+
+.nav-trigger:checked + .menu-toggle .middle {
+  transform: scaleX(0.4) translateY(20px);
+  opacity: 0.6;
+}
+
+.nav-trigger:checked + .menu-toggle .bottom {
+  transform: translateY(10px) scaleX(0.6);
+  opacity: 0.8;
+}
+
+// Settings for mobiles specifically
+@media screen and (max-width: 768px) {
+  .main-nav {
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #2222;
+}
+
+  .main-nav a {
+    white-space: normal; // allow wrapping
+    word-break: break-word; // break long words if needed
+    overflow-wrap: anywhere; // fallback for older browsers
+    width: 100%; // ensures full button width
+    box-sizing: border-box;
+  }
+}
+
+// Ensure specific settings when in landscape mode
+@media screen and (min-width: 769px) {
+  .trigger {
+    display: block !important;
+  }
+
+  .nav-trigger,
+  label[for="nav-trigger"] {
+    display: none;
+  }
+
+  // Override - force a single
+  .main-nav {
+    flex-wrap: nowrap; // force single line
+  }
+}
